@@ -70,139 +70,140 @@ def 刷新():
                     间隔 = config_["间隔"]
                     识别阈值 = config_["识别阈值"]
                     # 尝试根据屏幕上的武器图标，判断用户使用的武器，并根据武器类型选择相应的后坐力补偿值
-                    # try:
-                    if pyautogui.locateOnScreen(r".\ts\R301.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["R301"]
-                        是否启动连点 = False
-                        # 如果开启了调试模式，就用语音播报武器名称
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("R301")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\R99.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["R99"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("R99")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\fcns.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["fcns"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("复仇女神")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\dn.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["dn"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("电能冲锋枪")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\zz.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["zz"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("专注轻机枪")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\hwk.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["hwk"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("哈沃克步枪")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\car.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["car"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("CAR冲锋枪")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\bz.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["bz"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("暴走")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\ak.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["ak"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("平行步枪")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\ls.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["ls"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("猎兽冲锋枪")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\ph.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["ph"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("喷火轻机枪")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\zhz.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["zhz"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("转换者冲锋枪")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\re45.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["re45"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("RE45自动手枪")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\zb.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["zb"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("滋崩")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\G7.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["G7"]
-                        是否启动连点 = True
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("G7侦查枪")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\3030.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["3030"]
-                        是否启动连点 = True
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("3 0 3 0")
-                            engine.runAndWait()
-                    elif pyautogui.locateOnScreen(r".\ts\Lstar.png", grayscale=True, confidence=识别阈值):
-                        choice_ = config_["Lstar"]
-                        是否启动连点 = False
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("L star")
-                            engine.runAndWait()
-                    else:
-                        choice_ = config_["默认"]
-                        if config_["debug"] == 1:
-                            engine = pyttsx3.init()
-                            engine.say("默认")
-                            engine.runAndWait()
+                    try:
+                        #如果这里报错请查看locateOnScreen的__init__文件第174行改成return None
+                        if pyautogui.locateOnScreen(r".\ts\R301.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["R301"]
+                            是否启动连点 = False
+                            # 如果开启了调试模式，就用语音播报武器名称
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("R301")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\R99.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["R99"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("R99")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\fcns.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["fcns"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("复仇女神")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\dn.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["dn"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("电能冲锋枪")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\zz.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["zz"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("专注轻机枪")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\hwk.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["hwk"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("哈沃克步枪")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\car.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["car"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("CAR冲锋枪")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\bz.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["bz"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("暴走")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\ak.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["ak"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("平行步枪")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\ls.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["ls"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("猎兽冲锋枪")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\ph.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["ph"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("喷火轻机枪")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\zhz.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["zhz"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("转换者冲锋枪")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\re45.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["re45"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("RE45自动手枪")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\zb.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["zb"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("滋崩")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\G7.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["G7"]
+                            是否启动连点 = True
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("G7侦查枪")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\3030.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["3030"]
+                            是否启动连点 = True
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("3 0 3 0")
+                                engine.runAndWait()
+                        elif pyautogui.locateOnScreen(r".\ts\Lstar.png", grayscale=True, confidence=识别阈值) != None:
+                            choice_ = config_["Lstar"]
+                            是否启动连点 = False
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("L star")
+                                engine.runAndWait()
+                        else:
+                            choice_ = config_["默认"]
+                            if config_["debug"] == 1:
+                                engine = pyttsx3.init()
+                                engine.say("默认")
+                                engine.runAndWait()
 
                     # 如果出现异常，就用语音播报错误信息，并提示用户检查文件夹位置
-                    # except:
-                    engine = pyttsx3.init()
-                    engine.say("错误,请查看ts文件夹是否与exe在同一目录下")
-                    engine.runAndWait()
+                    except:
+                        engine = pyttsx3.init()
+                        engine.say("错误,请查看ts文件夹是否与exe在同一目录下")
+                        engine.runAndWait()
                     # 打印当前的参数值，方便用户查看
                     # finally:
                     #     print(次数, choice_, 间隔)
